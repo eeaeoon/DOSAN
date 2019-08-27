@@ -14,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class IndexController {
 
-	@RequestMapping(value = { "/index", "/thymeleafmerge/thymeleafExtend" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/index", "/layout/defaultLayout" }, method = RequestMethod.GET)
 	public void actionMethod(@RequestParam Map<String, Object> paramMap, ModelAndView modelandView) {
 		String viewName = "/index";
 

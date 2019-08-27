@@ -1,6 +1,149 @@
 <div xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/defaultLayout">
     <th:block layout:fragment="layout.content">
-        <h1>Page Content</h1>
+        <div>
+            <div class="body pt-5">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                        <li data-target="#demo" data-slide-to="3"></li>
+                        <li data-target="#demo" data-slide-to="4"></li>
+                    </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../static/image/intro01.png" th:src="@{/image/intro01.png}" alt="banner01"
+                                width="100%" height="620px">
+                            <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../static/image/intro02.png" th:src="@{/image/intro02.png}" alt="banner03"
+                                width="100%" height="620px">
+                            <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../static/image/intro03.png" th:src="@{/image/intro03.png}" alt="banner04"
+                                width="100%" height="620px">
+                            <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../static/image/intro04.png" th:src="@{/image/intro04.png}" alt="banner05"
+                                width="100%" height="620px">
+                            <div class="carousel-caption"></div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+            <!--carousel-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 py-5">
+                        <!--intro1-->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="../../static/image/intro01.png" th:src="@{/image/intro01.png}" alt="intro01"
+                                    class="w-100">
+                            </div>
+                            <div class="col-lg-6 my-auto">
+                                <h3>
+                                    모바일로 더 손쉬운<br>
+                                    계좌개설, 간편한 이체
+                                </h3>
+                                <p>
+                                    공인인증서, OTP없이 계좌 개설이 간편합니다.<br>
+                                    여러 건의 이체도 몇 번의 터치로 손쉽게 보낼 수 있습니다.
+                                </p>
+                                <a href="/intro" target="_self" class="border p-3">
+                                    강박뱅크 입출금 통장 >
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--intro1-->
+                    <div class="col-lg-12">
+                        <!--intro2-->
+                        <div class="row">
+                            <div class="col-lg-6 my-auto">
+                                <h3>
+                                    우대조건 없이<br>
+                                    합리적인 예금과 적금
+                                </h3>
+                                <p>
+                                    기대했던 금리와 다르게 복잡한 우대조건에 실망한 적이 있었나요?<br>
+                                    강박뱅크의 예금,적금은 숨겨진 우대조건 없이 누구에게나 편리하고 합리적입니다.
+                                </p>
+                                <a href="/intro" target="_self" class="border p-3">
+                                    정기예금 >
+                                </a>
+                                <a href="/intro" target="_self" class="border p-3">
+                                    자유적금 >
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="../../static/image/intro02.png" th:src="@{/image/intro02.png}" alt="intro02"
+                                    class="w-100">
+                            </div>
+                        </div>
+                    </div>
+                    <!--intro2-->
+                    <div class="col-lg-12">
+                        <!--intro3-->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="../../static/image/intro03.png" th:src="@{/image/intro03.png}" alt="intro03"
+                                    class="w-100">
+                            </div>
+                            <div class="col-lg-6 my-auto">
+                                <h3>
+                                    함께 쓰고 같이 보는<br>
+                                    모임통장
+                                </h3>
+                                <p>
+                                    모임통장으로 초대하고 친구들과 함께<br>
+                                    잔액과 입출금 현황을 확인할 수 있습니다.<br>
+                                    재미있는 메시지 카드로 회비 입금 요청도 해보세요.
+                                </p>
+                                <a href="/intro" target="_self" class="border p-3">
+                                    모임통장 >
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--intro3-->
+                    <div class="col-lg-12">
+                        <!--intro4-->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="../../static/image/intro04.png" th:src="@{/image/intro04.png}" alt="intro04"
+                                    class="w-100">
+                            </div>
+                            <div class="col-lg-6 my-auto">
+                                <h3>
+                                    해외계좌송금과<br>
+                                    WU빠른해외송금을<br>
+                                    더 쉽고, 저렴하게
+                                </h3>
+                                <p>
+                                    해외계좌송금이 가능한 22개국을 포함하여<br>
+                                    전세계 200여개국으로<br>
+                                    WU빠른해외송금이 가능합니다.
+                                </p>
+                                <a href="/intro" target="_self" class="border p-3">
+                                    해외송금 >
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--intro4-->
+                </div>
+            </div>
+        </div>
     </th:block>
 
     <!-- <th:block layout:fragment="pageCustomScript">

@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- jQuery -->
 <script type="text/javascript" src="../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
@@ -22,3 +25,39 @@
 
 <!-- Custom Fonts -->
 <link type="text/css" href="../static/css/font-awesome.css" th:href="@{/css/font-awesome.css}" rel="stylesheet" />
+
+<header th:fragment="commonHeader01">
+    <div class="header bg-secondary fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary container">
+            <a class="navbar-brand" href="/">강박Bank</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="intro">은행 소개</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manage">계좌 관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="help">고객센터</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">관리자 페이지</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item"><a class="nav-link" href="login">로그인</a></li>
+                        <li class="nav-item"><a class="nav-link" href="signup">회원가입</a></li>
+                    </ul>
+                </span>
+            </div>
+        </nav>
+    </div>
+</header>
+
+</html>
