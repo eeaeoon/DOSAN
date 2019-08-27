@@ -306,4 +306,29 @@
     </form>
 </th:block>
 
+<th:block th:fragment="manage">
+    <div class="container py-5 my-5">
+        <div class="border border-danger">
+            <div class="mx-auto card" style="width: 100%;">
+                계좌 명의 :<br>
+                계좌 번호 :<br>
+                잔액 :<br>
+                <div class="container row mx-auto border border-danger">
+                    <button>조회</button>
+                    <button>이체</button>
+                    <button>계좌 추가</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="border border-dark col-6">
+                입금/출금 목록 </div>
+            <div class="border border-primary col-6">
+                가입된 상품
+            </div>
+        </div>
+    </div>
+</th:block>
+
 </html>
