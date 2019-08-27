@@ -1,7 +1,24 @@
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/defaultLayout">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d9e27c7b71.js"></script>
+
+</head>
 <th:block th:fragment="content">
-    <div>
-        <div class="body pt-5">
+    <div class="container">
+        <div class="body mx-auto my-5 pt-5" style="width:550px">
             <div id="demo" class="carousel slide" data-ride="carousel">
                 <ul class="carousel-indicators">
                     <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -41,7 +58,7 @@
             </div>
         </div>
         <!--carousel-->
-        <div class="container">
+        <div class="container ">
             <div class="row">
                 <div class="col-lg-12 py-5">
                     <!--intro1-->
@@ -59,8 +76,8 @@
                                 공인인증서, OTP없이 계좌 개설이 간편합니다.<br>
                                 여러 건의 이체도 몇 번의 터치로 손쉽게 보낼 수 있습니다.
                             </p>
-                            <a href="/intro" target="_self" class="border p-3">
-                                강박뱅크 입출금 통장 >
+                            <a class="btn btn-primary" href="/index" target="_self">
+                                도산뱅크 입출금 통장 >
                             </a>
                         </div>
                     </div>
@@ -76,12 +93,12 @@
                             </h3>
                             <p>
                                 기대했던 금리와 다르게 복잡한 우대조건에 실망한 적이 있었나요?<br>
-                                강박뱅크의 예금,적금은 숨겨진 우대조건 없이 누구에게나 편리하고 합리적입니다.
+                                도산뱅크의 예금,적금은 숨겨진 우대조건 없이 누구에게나 편리하고 합리적입니다.
                             </p>
-                            <a href="/intro" target="_self" class="border p-3">
+                            <a href="/intro" target="_self" class="btn btn-primary">
                                 정기예금 >
                             </a>
-                            <a href="/intro" target="_self" class="border p-3">
+                            <a href="/intro" target="_self" class="btn btn-primary">
                                 자유적금 >
                             </a>
                         </div>
@@ -109,7 +126,7 @@
                                 잔액과 입출금 현황을 확인할 수 있습니다.<br>
                                 재미있는 메시지 카드로 회비 입금 요청도 해보세요.
                             </p>
-                            <a href="/intro" target="_self" class="border p-3">
+                            <a href="/intro" target="_self" class="btn btn-primary">
                                 모임통장 >
                             </a>
                         </div>
@@ -134,7 +151,7 @@
                                 전세계 200여개국으로<br>
                                 WU빠른해외송금이 가능합니다.
                             </p>
-                            <a href="/intro" target="_self" class="border p-3">
+                            <a href="/intro" target="_self" class="btn btn-primary">
                                 해외송금 >
                             </a>
                         </div>

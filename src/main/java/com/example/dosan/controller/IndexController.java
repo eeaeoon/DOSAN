@@ -14,7 +14,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class IndexController {
 
-	@RequestMapping(value = { "/index", "/layout/defaultLayout" }, method = RequestMethod.GET)
+	// @RequestMapping(value = { "/index", "/layout/defaultLayout" }, method =
+	// RequestMethod.GET)
+	@RequestMapping(value = { "/index", "/intro", "/manage", "/send", "/help", "/join", "/login", "/signup",
+			"/admin" }, method = RequestMethod.GET)
 	public void actionMethod(@RequestParam Map<String, Object> paramMap, ModelAndView modelandView) {
 		String viewName = "/index";
 
