@@ -21,8 +21,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="./js/Healthier_js.js"></script>
-
+    
+    <link rel="stylesheet" href="../../static/css/intro.css" th:href="@{/css/intro.css}">
 </head>
+
 <th:block th:fragment="content">
     <div class="container">
         <div class="body mx-auto my-5 pt-5" style="width:550px">
@@ -306,4 +308,52 @@
     </form>
 </th:block>
 
+<th:block th:fragment="intro">
+    <div class="image">
+        
+            <nav class="navbar navbar-light bg-light">
+                    <form class="form-inline">
+                        <button class="btn btn-sm btn-outline-secondary" type="button">brand</button>
+                        <button class="btn btn-sm btn-outline-secondary" type="button">공지사항</button>
+                        <button class="btn btn-sm btn-outline-secondary" type="button">오시는길</button>
+                        <button class="btn btn-sm btn-outline-secondary" type="button">제휴문의</button>
+                    </form>
+            </nav>
+
+        <img src="#" alt="My Image" th:src="@{/image/introimage.jpg}" width="100%" height="100%">
+   
+        <div class="text">
+                <p>신뢰받고 앞서가는</p>
+                <p>글로벌 금융그룹</p>
+                <p>dosan</p>
+        </div>
+    </div>
+
+    <div class="card">
+        
+        <img src="images/card-image.png" alt="" />
+        
+        <div class="card-body">
+            <p>연혁</p>
+
+            <h5 class="card-title">2016</h5>
+            <p class="card-text">1월 강박Bank 주식회사 설립</p>
+            <p class="card-text">6월 강박Bank 영업 개시</p>
+
+            <h5 class="card-title">2017</h5>
+            <p class="card-text">2월 100만 계좌 돌파</p>
+            <p class="card-text">12월 구글플레이 '올해의 앱'선정</p>
+            
+            <h5 class="card-title">2018</h5>
+            <p class="card-text">1월 대출시스템 도입</p>
+            <p class="card-text">4월 'Fast Company' 세계 50대 혁신기업 선정</p>
+            
+            <h5 class="card-title">2019</h5>
+            
+        </div>
+    
+    </div>
+
+    
+</th:block>
 </html>

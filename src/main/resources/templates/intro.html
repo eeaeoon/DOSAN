@@ -13,7 +13,7 @@
     </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="../../static/css/intro.css" th:href="@{/css/intro.css}">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
     <th:block th:replace="fragments/commonHead :: commonHeader01"></th:block>
 
     <!-- 레이아웃 -->
-    <th:block th:replace="layout/thymeleafBase :: content"></th:block>
+    <th:block th:replace="layout/thymeleafBase :: intro"></th:block>
 
     <!-- 푸터 -->
     <th:block th:replace="fragments/commonFooter :: commonFooter01"></th:block>
