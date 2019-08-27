@@ -4,7 +4,7 @@ package com.example.dosan.controller;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.example.dosan.service.OrganizationService;
+import com.example.dosan.service.ManageService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +20,7 @@ public class ManageController {
     private final static String MAPPING = "/manage/";
 
     @Autowired
-    private OrganizationService service;
+    private ManageService service;
 
     // Receive Parameters from Html Using @RequestParam Map with @PathVariable
     @RequestMapping(value = MAPPING + "{action}", method = { RequestMethod.GET, RequestMethod.POST })
