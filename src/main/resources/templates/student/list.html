@@ -29,16 +29,15 @@
 							<tbody>
 								<tr th:each="resultData: ${resultMap.resultList}">
 									<td><input type="checkbox" id="selecctall" /></td>
-									
-									<td><a href="./student/read"
-											th:href=@{/student/read(id=${resultData.id})} th:text=${resultData.name}>NAME
-											</a> </td>
+
+									<td><a href="./student/read" th:href=@{/student/read(id=${resultData.id})}
+											th:text=${resultData.name}>NAME
+										</a> </td>
 									<td th:text=${resultData.passport_number}>ORDER_NUMBER</td>
-									<td><a href="./student/update"
-											th:href=@{/student/update(id=${resultData.id})}>edit
+									<td><a href="./student/update" th:href=@{/student/update(id=${resultData.id})}>edit
 											</a> </td> <td><a href="./student/delete"
-												th:href=@{/student/delete(id=${resultData.id})}>delete
-												</a> </td> </tr> </tbody> </table> </div> <!-- /.table-responsive -->
+												th:href=@{/student/delete(id=${resultData.id})}>delete </a> </td> </tr>
+												</tbody> </table> </div> <!-- /.table-responsive -->
 					</div>
 					<!-- /.panel-body -->
 				</div>
