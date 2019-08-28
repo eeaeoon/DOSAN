@@ -4,7 +4,8 @@
 <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
@@ -21,7 +22,7 @@
     <th:block th:replace="fragments/commonHead :: commonHeader01"></th:block>
 
     <!-- 레이아웃 -->
-    <div class="container">
+    <div class="container mt-5 pt-5">
         <form class="card mt-5 p-4" action="#" method="GET">
             <div class="form-inline mt-3">
                 <div class="custom-control custom-radio mr-3">
@@ -53,13 +54,14 @@
             </div>
             <div class="form-group mt-4">
                 <label>송금금액</label>
-                <input class="form-control border-top-0 border-left-0 border-right-0" type="text" id="nt_send" name="send_value" placeholder="금액을 입력하시오" disabled>
+                <input class="form-control border-top-0 border-left-0 border-right-0" type="text" id="nt_send"
+                    name="send_value" placeholder="금액을 입력하시오" disabled>
             </div>
             <br>
             <div class="form-inline">
                 <div class="custom-control custom-radio">
-                        <input class="custom-control-input" type="radio" id="customRadio7" name="bank_name" value="해외송금">
-                        <label class="custom-control-label" for="customRadio7" name="bank_name">해외 송금</label>
+                    <input class="custom-control-input" type="radio" id="customRadio7" name="bank_name" value="해외송금">
+                    <label class="custom-control-label" for="customRadio7" name="bank_name">해외 송금</label>
                 </div>
                 <div class="form-group">
                     <select class="custom-select my-1 ml-3" id="national" disabled>
@@ -71,11 +73,13 @@
                 </div>
             </div>
             <div class="form-inline justify-content-center">
-                <input class="form-control" type="text" name="send_value" id="int_send" placeholder="송금액을 입력하시오." disabled>
+                <input class="form-control" type="text" name="send_value" id="int_send" placeholder="송금액을 입력하시오."
+                    disabled>
                 <input class="form-control" type="text" name="send_value2" disabled>
             </div>
             <div class="form-group">
-                <input class="form-control" type="text" name="account_num" placeholder="송금계좌(&quot;-&quot;를 포함시켜 입력해 주십시오.")>
+                <input class="form-control" type="text" name="account_num"
+                    placeholder="송금계좌(&quot;-&quot;를 포함시켜 입력해 주십시오." )>
             </div>
             <button type="submit" class="btn btn-primary"> 송금 진행 </button>
         </form>
