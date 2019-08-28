@@ -38,7 +38,7 @@ public class ManageController {
             action = "read";
         } else if ("insert".equals(action)) {
             resultMap = service.saveObject(paramMap);
-            action = "read";
+            action = "";
         } else if ("read".equals(action)) {
             resultMap = service.getObject(paramMap);
         } else if ("list".equals(action)) {
