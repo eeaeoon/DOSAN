@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="send">
+	<select id="list" resultType="Map" timeout="10">
+		select *
+		<!--
+			INDEX
+			, ACCOUNT_NUM		
+			, OTHER_NUM		
+			, OTHER_BANK		
+			, OTHER_NAME		
+			, VALUE		
+			, DATE
+			-->
+		from INOUT
+	</select>
+
+	<select id="read" resultType="Map" parameterType="Map">
+		select *
+		from STUDENT
+		where ID = #{ORGANIZATION_SEQ}
+	</select>
+
+	<insert id="update" parameterType="Map">
+	    update ACCOUNT
+		set VALUE = VALUE - #{VALUE}
+		where ACCOUNT_NUM = #{ACCOUNT_NUM}
+	</insert>
+
+	<insert id="insert" parameterType="Map">
+	    INSERT INTO INOUT (
+			INDEX
+			,ACCOUNT_NUM			<!-- 조직 일련번호 -->
+			, OTHER_NUM			<!-- 명칭 -->
+			, OTHER_BANK			<!-- 대표 전화번호 -->
+			, OTHER_NAME			<!-- 정렬순서 -->
+			, VALUE			<!-- 상위 조직 일련번호 -->
+			, DATE
+		)
+		values(
+			 null
+			, #{ACCOUNT_NUM}			<!-- 조직 일련번호 -->
+			, #{OTHER_NUM}			<!-- 명칭 -->
+			, #{OTHER_BANK}			<!-- 대표 전화번호 -->
+			, #{OTHER_NAME}			<!-- 정렬순서 -->
+			, #{VALUE}			<!-- 상위 조직 일련번호 -->
+			, #{DATE}
+		)
+	</insert>
+
+	<delete id="delete" parameterType="Map">
+		delete from CIP_ORGANIZATION
+		where ORGANIZATION_SEQ = #{ORGANIZATION_SEQ}
+	</delete>
+</mapper>

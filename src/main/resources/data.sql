@@ -49,3 +49,16 @@ SELECT 'UUID-11-CIPI9A','설비파트 설비직','051-2260-3438',1,'UUID-11-CIPI
 SELECT 'UUID-11-CIPI37','장비생산기술팀(제조기술)','051-2260-3429',1,'UUID-11-CIPI7Q' FROM dual UNION ALL
 SELECT 'UUID-11-CIPI9L','장비생산기술팀(시험평가)','051-2260-3430',1,'UUID-11-CIPI7S' FROM dual UNION ALL
 SELECT 'UUID-11-CIPI9M','장비품질보증팀(개발품질)','051-2260-3436',1,'UUID-11-CIPI8I' FROM dual ;
+
+
+insert into ACCOUNT
+values('이재훈', 1000000 , '1111-1111-1111', '카카오뱅크' );
+
+insert into INOUT
+values(0,'1111-1111-1111', '2222-2222-2222', '신한은행', '강두훈', 10000, 20190807);
+insert into INOUT
+values(1,'1111-1111-1111', '4444-4444-4444', '신한은행', '정재정', 10000, 20190807);
+
+
+insert into PRODUCT
+values('이재훈', '안전 자산 적금' , '2019-08-28' );
