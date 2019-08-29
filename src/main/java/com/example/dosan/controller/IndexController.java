@@ -17,8 +17,8 @@ public class IndexController {
 	// @RequestMapping(value = { "/index", "/layout/defaultLayout" }, method =
 	// RequestMethod.GET)
 
-	@RequestMapping(value = { "/index", "/intro", "/manage", "/send", "/help", "/join", "/login", "/signup",
-			"/admin","/brand", "/map }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/index", "/intro", "/manage", "/send", "/help", "/join", "/login", "/sign",
+			"/admin","/brand", "/map" }, method = RequestMethod.GET)
 
 	public void actionMethod(@RequestParam Map<String, Object> paramMap, ModelAndView modelandView) {
 		String viewName = "/index";
