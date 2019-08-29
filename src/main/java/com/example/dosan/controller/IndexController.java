@@ -1,8 +1,11 @@
 package com.example.dosan.controller;
 
+import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,18 +16,29 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class IndexController {
-
+	@Autowired
+	private  LoginController loginController;
 	// @RequestMapping(value = { "/index", "/layout/defaultLayout" }, method =
 	// RequestMethod.GET)
+	ModelAndView fakemodelView = new ModelAndView();
+	Map<String, Object> fakeMap = new HashMap<String, Object>();
+	String fakeString = new String();
+	ModelAndView realmodelView = new ModelAndView();
 
-	@RequestMapping(value = { "/index", "/intro", "/manage", "/send", "/help", "/join", "/login", "/signup",
-			"/admin","/brand", "/map }, method = RequestMethod.GET)
 
-	public void actionMethod(@RequestParam Map<String, Object> paramMap, ModelAndView modelandView) {
-		String viewName = "/index";
-
+	@RequestMapping(value = "/{action}" /*{ "/index", "/intro", "/manage", "/send", "/help", "/join", "/login", "/signup",
+			"/admin","/brand", "/map" }*/, method = RequestMethod.GET)
+		public String actionMethod(@RequestParam Map<String, Object> paramMap, @PathVariable String action, ModelAndView modelandView) {
+			if ("login".equals(action) || "sign".equals(action) || "intro".equals(action)){
+				return "/"+ action;
+			}
+			else if (loginController.checker){
+				return	"/"+ action;
+			}
+			else
+				return "/false";
+		}
 		// modelandView.setViewName(viewName);
 
 		// return modelandView;
-	}
 }
