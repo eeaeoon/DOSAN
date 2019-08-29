@@ -66,12 +66,10 @@
                                                         <td th:text=${resultData.VALUE}>VALUE</td>
                                                         <td th:text=${resultData.BANK_NAME}>BANK_NAME</td>
                                                         <td><a href="./manage/update"
-                                                                th:href=@{/manage/update(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>edit
-                                                                </a> </td> <td><a href="./manage/delete"
-                                                                    th:href=@{/manage/delete(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>delete
-                                                                    </a> </td> </tr> </tbody> </table> <a
-                                                                    class="btn btn-primary btn-sm" href="#"
-                                                                    role="button">계좌 추가</a>
+                                                                th:href=@{/manage/edit(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>edit
+                                                            </a></td> 
+                                                        <td><a href="./manage/delete" th:href=@{/manage/delete(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>delete
+                                                                    </a> </td> </tr> </tbody> </table> <a class="btn btn-primary btn-sm" href="#" role="button">계좌 추가</a>   
                                     </div>
                                     </p>
                                 </div>

@@ -29,29 +29,29 @@
                         <div class="jumbotron">
                             <h1 class="display-5">계좌수정</h1>
                             <hr class="my-4">
-                            <form>
+                            <form th:action="@{/manage/update}" method="POST">
                                 <div class="form-row">
                                     <div class="form-group col">
                                         <label>계좌번호</label>
-                                        <input type="text" class="form-control" name="ACCOUNT_NUM">
+                                        <input type="text" class="form-control" th:value=${resultMap.ACCOUNT_NUM} name="ACCOUNT_NUM">
                                     </div>
                                     <div class="form-group col">
                                         <label>이름</label>
-                                        <input type="text" class="form-control" name="NAME" disabled>
+                                        <input type="text" class="form-control" th:value=${resultMap.NAME} name="NAME" readonly>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col">
                                         <label>잔액</label>
-                                        <input type="text" class="form-control" name="VALUE">
+                                        <input type="text" class="form-control" th:value=${resultMap.VALUE} name="VALUE" readonly>
                                     </div>
                                     <div class="form-group col">
                                         <label>은행명</label>
-                                        <input type="text" class="form-control" name="BANK_NAME">
+                                        <input type="text" class="form-control" th:value=${resultMap.BANK_NAME} name="BANK_NAME">
                                     </div>
                                 </div>
                                 <div class="form-row justify-content-center">
-                                    <button type="button" class="btn btn-dark mx-3">돌아가기</button> 
+                                    <a class="btn btn-dark mx-3" th:href="@{/manage/list}">돌아가기</a>
                                     <button type="submit" class="btn btn-dark mx-3 px-4"> 수정 </button>
                                 </div>
                             </form>

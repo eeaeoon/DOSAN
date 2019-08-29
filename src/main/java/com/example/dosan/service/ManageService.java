@@ -59,7 +59,7 @@ public class ManageService {
     }
 
     public Object updateObject(Map<String, Object> dataMap) {
-        String sqlMapId = "manage.update";
+        String sqlMapId = "manage.edit";
 
         Integer resultKey = (Integer) dao.saveObject(sqlMapId, dataMap);
 

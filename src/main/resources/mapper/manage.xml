@@ -18,13 +18,20 @@
 	<select id="read" resultType="Map" parameterType="Map">
 		select *
 		from ACCOUNT
-		where ID = #{ACCOUNT_NUM}
+		where ACCOUNT_NUM = #{ACCOUNT_NUM}
 	</select>
 
 	<insert id="update" parameterType="Map">
-	    update ACCOUNT 
+	    update ACCOUNT
 		set VALUE = VALUE - #{VALUE} 			
 			where ACCOUNT_NUM = #{ACCOUNT_NUM}
+	</insert>
+
+	<insert id="edit" parameterType="Map">
+		update ACCOUNT
+		set	ACCOUNT_NUM = #{ACCOUNT_NUM}
+			, BANK_NAME = #{BANK_NAME}
+		where NAME = #{NAME}
 	</insert>
 
 	<insert id="insert" parameterType="Map">
@@ -45,7 +52,7 @@
 	</insert>
 
 	<delete id="delete" parameterType="Map">
-		delete from CIP_ORGANIZATION
-		where ORGANIZATION_SEQ = #{ORGANIZATION_SEQ}
+		delete from ACCOUNT
+		where ACCOUNT_NUM = #{ACCOUNT_NUM}
 	</delete>
 </mapper>

@@ -34,32 +34,32 @@ public class ManageController {
     public ModelAndView actionMethod(@RequestParam Map<String, Object> paramMap, @PathVariable String action,
             ModelAndView modelandView) {
             if (loginController.checker){
-            Object resultMap = new HashMap<String, Object>();
-            Object sendMap = new HashMap<String, Object>();
-            // divided depending on action value
-            if ("edit".equals(action)) {
-                resultMap = service.getObject(paramMap);
-            } else if ("input".equals(action)) {
-            } else if ("update".equals(action)) {
-                resultMap = service.updateObject(paramMap);
-                action = "read";
-            } else if ("insert".equals(action)) {
-                resultMap = service.saveObject(paramMap);
-                action = "";
-            } else if ("read".equals(action)) {
-                resultMap = service.getObject(paramMap);
-            } else if ("list".equals(action)) {
-                resultMap = service.getList(paramMap);
-                sendMap = send_service.getList(paramMap);
-            } else if ("delete".equals(action)) {
-                resultMap = service.deleteObject(paramMap);
-                action = "list";
-            }
-            String viewName = MAPPING + action;
-            modelandView.setViewName(viewName);
-            modelandView.addObject("paramMap", paramMap);
-            modelandView.addObject("resultMap", resultMap);
-            modelandView.addObject("sendMap", sendMap);
+                Object resultMap = new HashMap<String, Object>();
+                Object sendMap = new HashMap<String, Object>();
+                // divided depending on action value
+                if ("edit".equals(action)) {
+                    resultMap = service.getObject(paramMap);
+                } else if ("input".equals(action)) {
+                } else if ("update".equals(action)) {
+                    resultMap = service.updateObject(paramMap);
+                    action = "read";
+                } else if ("insert".equals(action)) {
+                    resultMap = service.saveObject(paramMap);
+                    action = "";
+                } else if ("read".equals(action)) {
+                    resultMap = service.getObject(paramMap);
+                } else if ("list".equals(action)) {
+                    resultMap = service.getList(paramMap);
+                    sendMap = send_service.getList(paramMap);
+                } else if ("delete".equals(action)) {
+                    resultMap = service.deleteObject(paramMap);
+                    action = "read";
+                }
+                String viewName = MAPPING + action;
+                modelandView.setViewName(viewName);
+                modelandView.addObject("paramMap", paramMap);
+                modelandView.addObject("resultMap", resultMap);
+                modelandView.addObject("sendMap", sendMap);
         }
         else {
             modelandView.setViewName("/false");

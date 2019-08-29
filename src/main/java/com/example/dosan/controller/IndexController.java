@@ -33,7 +33,4 @@ public class IndexController {
 			else
 				return "/false";
 		}
-		// modelandView.setViewName(viewName);
-
-		// return modelandView;
 }
