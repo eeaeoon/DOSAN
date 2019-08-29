@@ -7,15 +7,6 @@
 <mapper namespace="send">
 	<select id="list" resultType="Map" timeout="10">
 		select *
-		<!--
-			INDEX
-			, ACCOUNT_NUM		
-			, OTHER_NUM		
-			, OTHER_BANK		
-			, OTHER_NAME		
-			, VALUE		
-			, DATE
-			-->
 		from INOUT
 	</select>
 

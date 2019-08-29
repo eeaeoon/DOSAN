@@ -20,13 +20,13 @@
 		from ACCOUNT
 		where ID = #{ACCOUNT_NUM}
 	</select>
-<!--
+
 	<insert id="update" parameterType="Map">
 	    update ACCOUNT 
 		set VALUE = VALUE - #{VALUE} 			
 			where ACCOUNT_NUM = #{ACCOUNT_NUM}
 	</insert>
--->
+
 	<insert id="insert" parameterType="Map">
 	    INSERT INTO CIP_ORGANIZATION (
 			ORGANIZATION_SEQ			<!-- 조직 일련번호 -->

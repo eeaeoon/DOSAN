@@ -20,14 +20,9 @@ public class IndexController {
 	private  LoginController loginController;
 	// @RequestMapping(value = { "/index", "/layout/defaultLayout" }, method =
 	// RequestMethod.GET)
-	ModelAndView fakemodelView = new ModelAndView();
-	Map<String, Object> fakeMap = new HashMap<String, Object>();
-	String fakeString = new String();
-	ModelAndView realmodelView = new ModelAndView();
 
 
-	@RequestMapping(value = "/{action}" /*{ "/index", "/intro", "/manage", "/send", "/help", "/join", "/login", "/signup",
-			"/admin","/brand", "/map" }*/, method = RequestMethod.GET)
+	@RequestMapping(value = "/{action}", method = RequestMethod.GET)
 		public String actionMethod(@RequestParam Map<String, Object> paramMap, @PathVariable String action, ModelAndView modelandView) {
 			if ("login".equals(action) || "sign".equals(action) || "intro".equals(action)){
 				return "/"+ action;
