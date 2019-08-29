@@ -6,10 +6,27 @@
 .image .text {
     position:absolute;
     top:20%;
-    left:40%;
+    left:42%;
     font-size:3rem;
     color:black;
 }
+
+.image .text1 {
+    position:absolute;
+    top:40%;
+    left:45%;
+    font-size:3rem;
+    color:black;
+}
+
+.image .text2 {
+    position:absolute;
+    top:34%;
+    left:46%;
+    font-size:3rem;
+    color:black;
+}
+
 
 .card {
     margin-bottom: 150px;
