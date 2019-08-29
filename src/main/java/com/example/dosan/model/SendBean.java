@@ -14,6 +14,7 @@ public class SendBean implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue
+    private Integer INDEX;
     private String ACCOUNT_NUM;
     private String OTHER_NUM;
     private String OTHER_BANK;

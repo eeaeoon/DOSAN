@@ -36,13 +36,14 @@ CREATE TABLE ACCOUNT
 -- 입출금내역 테이블
 CREATE TABLE INOUT
 (
+    INDEX           INT            NOT NULL    AUTO_INCREMENT COMMENT '내역인덱스', 
     ACCOUNT_NUM  VARCHAR(45)    NOT NULL    COMMENT '계좌번호',
-    OTHER_NUM    VARCHAR(45)    NOT NULL        COMMENT '상대방계좌번호',
+    OTHER_NUM    VARCHAR(45)    NOT NULL    COMMENT '상대방계좌번호',
     OTHER_BANK   VARCHAR(45)    NOT NULL    COMMENT '상대방은행',
     OTHER_NAME   VARCHAR(45)    NOT NULL    COMMENT '상대방이름',
-    VALUE        DOUBLE         NOT NULL        COMMENT '송금금액',
-    DATE         DATE           NOT NULL        COMMENT '보낸날짜',
-    PRIMARY KEY (DATE)
+    VALUE        DOUBLE         NOT NULL    COMMENT '송금금액',
+    DATE         DATE           NOT NULL    COMMENT '보낸날짜',
+    PRIMARY KEY (INDEX)
 );
 /*
 ALTER TABLE INOUT
