@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.example.dosan.service.ManageService;
+import com.example.dosan.service.SendService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,13 +23,16 @@ public class ManageController {
     @Autowired
     private ManageService service;
 
+    @Autowired
+    private SendService send_service;
+
     // Receive Parameters from Html Using @RequestParam Map with @PathVariable
     @RequestMapping(value = MAPPING + "{action}", method = { RequestMethod.GET, RequestMethod.POST })
     public ModelAndView actionMethod(@RequestParam Map<String, Object> paramMap, @PathVariable String action,
             ModelAndView modelandView) {
 
         Object resultMap = new HashMap<String, Object>();
-
+        Object sendMap = new HashMap<String, Object>();
         // divided depending on action value
         if ("edit".equals(action)) {
             resultMap = service.getObject(paramMap);
@@ -43,17 +47,17 @@ public class ManageController {
             resultMap = service.getObject(paramMap);
         } else if ("list".equals(action)) {
             resultMap = service.getList(paramMap);
+            sendMap = send_service.getList(paramMap);
         } else if ("delete".equals(action)) {
             resultMap = service.deleteObject(paramMap);
             action = "list";
         }
 
         String viewName = MAPPING + action;
-
         modelandView.setViewName(viewName);
-
         modelandView.addObject("paramMap", paramMap);
         modelandView.addObject("resultMap", resultMap);
+        modelandView.addObject("sendMap", sendMap);
         return modelandView;
     }
 }

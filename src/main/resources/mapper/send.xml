@@ -5,19 +5,18 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="send">
-	<select id="list" resultType="Map" parameterType="Map" timeout="10">
-		select
-			ACCOUNT_NUM			<!-- 조직 일련번호 -->
-			, NAME			<!-- 명칭 -->
-			, TELEPHONE			<!-- 대표 전화번호 -->
-			, ORDER_NUMBER			<!-- 정렬순서 -->
-			, PARENT_ORGANIZATION_SEQ			<!-- 상위 조직 일련번호 -->
-		from CIP_ORGANIZATION
-		<where>
-			<if test="COMMON_CODE_ID != null">
-			        and PARENT_ORGANIZATION_SEQ = #{PARENT_ORGANIZATION_SEQ}
-			</if>
-		</where>
+	<select id="list" resultType="Map" timeout="10">
+		select *
+		<!--
+			INDEX
+			, ACCOUNT_NUM		
+			, OTHER_NUM		
+			, OTHER_BANK		
+			, OTHER_NAME		
+			, VALUE		
+			, DATE
+			-->
+		from INOUT
 	</select>
 
 	<select id="read" resultType="Map" parameterType="Map">
@@ -34,7 +33,8 @@
 
 	<insert id="insert" parameterType="Map">
 	    INSERT INTO INOUT (
-			ACCOUNT_NUM			<!-- 조직 일련번호 -->
+			INDEX
+			,ACCOUNT_NUM			<!-- 조직 일련번호 -->
 			, OTHER_NUM			<!-- 명칭 -->
 			, OTHER_BANK			<!-- 대표 전화번호 -->
 			, OTHER_NAME			<!-- 정렬순서 -->
@@ -42,7 +42,8 @@
 			, DATE
 		)
 		values(
-			#{ACCOUNT_NUM}			<!-- 조직 일련번호 -->
+			 null
+			, #{ACCOUNT_NUM}			<!-- 조직 일련번호 -->
 			, #{OTHER_NUM}			<!-- 명칭 -->
 			, #{OTHER_BANK}			<!-- 대표 전화번호 -->
 			, #{OTHER_NAME}			<!-- 정렬순서 -->
