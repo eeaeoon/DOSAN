@@ -21,8 +21,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="./js/Healthier_js.js"></script>
-
+    
+    <link rel="stylesheet" href="../../static/css/intro.css" th:href="@{/css/intro.css}">
 </head>
+
 <th:block th:fragment="content">
     <div class="container">
         <div class="body mx-auto my-5 pt-5" style="width:550px">
@@ -180,7 +182,7 @@
                 <p class="lead">모바일로 더 손쉬운 계좌개설, 간편한 이체 <br>도산뱅크로 시작하세요</p>
             </div>
 
-            <form class="form-group font-weight-bold form-signin" action="/login" method="GET"
+            <form class="form-group font-weight-bold form-signin" action="/login" method="POST"
                 onsubmit="javascript:return loginChk(this)">
                 <div class="container d-block text-center w-50 mt-3">
 
@@ -306,6 +308,142 @@
     </form>
 </th:block>
 
+<th:block th:fragment="intro">
+    <div class="image">
+        
+            <nav class="navbar navbar-light bg-light">
+                    <form class="form-inline">
+                        <button class="btn btn-sm btn-outline-secondary" type="button">brand</button>
+                        <button class="btn btn-sm btn-outline-secondary" type="button">공지사항</button>
+                        <button class="btn btn-sm btn-outline-secondary" type="button">오시는길</button>
+                        <button class="btn btn-sm btn-outline-secondary" type="button">제휴문의</button>
+                    </form>
+            </nav>
+
+        <img src="#" alt="My Image" th:src="@{/image/introimage.jpg}" width="100%" height="100%">
+   
+        <div class="text">
+                <p>신뢰받고 앞서가는</p>
+                <p>글로벌 금융그룹</p>
+        </div>
+        <div class="text1">
+                <p>D O S A N</p>
+        </div>
+    </div>
+
+    <div class="card">
+        
+        <img src="images/card-image.png" alt="" />
+        
+        <div class="card-body">
+            
+            <p>연혁</p>
+
+            <h5 class="card-title">2016</h5>
+            <p class="card-text">1월 강박Bank 주식회사 설립</p>
+            <p class="card-text">6월 강박Bank 영업 개시</p>
+
+            <h5 class="card-title">2017</h5>
+            <p class="card-text">2월 100만 계좌 돌파</p>
+            <p class="card-text">12월 구글플레이 '올해의 앱'선정</p>
+            
+            <h5 class="card-title">2018</h5>
+            <p class="card-text">1월 대출시스템 도입</p>
+            <p class="card-text">4월 'Fast Company' 세계 50대 혁신기업 선정</p>
+            
+            <h5 class="card-title">2019</h5>
+            
+        </div>
+    
+    </div>
+
+</th:block>
+
+<th:block th:fragment="brand">
+        <div class="image">
+        
+            <img src="#" alt="My Image" th:src="@{/image/brandimg.jpg}" width="100%" height="100%">
+       
+            <div class="text">
+                    <p>쉬운은행 나만의 은행</p>
+            </div>
+            <div class="text2">
+                    <p>D O S A N</p>
+            </div>
+        
+        </div>
+
+        <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                        <a class="navbar-brand" href="#">연혁</a>
+                </nav>
+        
+            <div class="row">
+                <div class="col-4">
+                    <img src="#" alt="My Image" th:src="@{/image/woong.png}" width="100%" height="50%">    
+                </div>
+            
+    
+                <div class="col-4">
+                        <div class="card" style="height: 25rem;">
+            
+                                <div class="card-body">
+                                  <h5 class="card-title">2015</h5>
+                                  <p class="card-text">대표 전웅재 강박은행 설립</p>
+                                  <p>Service Identity 선포(SMART Service]</p>
+                                  <p>중국 현지법인 설립</p>
+                                  <p>정부 출자 현금 3,000억원 (납입자본금 3조 2,079억원)</p>
+                                  <p>통합인터넷뱅킹시스템 가동(개인뱅킹)</p>
+                                  <p>베트남 하노이 사무소 개소</p>
+                                </div>
+                        </div>
+                        
+                        <div class="card" style="height: 25rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">2017</h5>
+                                  <p class="card-text">지역경제 활성화를 위한 KT&G ·IBK기업은행 동반성장 업무협약 체결</p>
+                                  <p>필리핀 마닐라지점 개점</p>
+                                  <p>「청년희망펀드 공익신탁」 판매</p>
+                                  <p>인도 뉴델리지점 개점</p>
+                                  <p>「대·중소기업협력재단 동반성장협력사업 협약식」 개최</p>
+                                  <p>「희망경영 실천, 3정 혁신활동」추진</p>
+                                </div>
+                        </div>
+
+                        <div class="card" style="height: 25rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">2019</h5>
+                                  <p class="card-text">필리핀(BDO)은행 업무협약체결(MOU)</p>
+                                  <p>「스마트뱅킹 이용고객 100만명」 돌파</p>
+                                  <p>러시아 VEB 은행 포괄적 업무협약체결(MOU)</p>
+                                </div>
+                        </div>
+                </div>
+                <div class="col-4">
+                        <div class="card" style="height: 25rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">2016</h5>
+                                  <p class="card-text">한국농어촌공사「중소기업 지원을 위한 동반성장협력 협약」체결</p>
+                                  <p>4세대 IT시스템 「POST차세대시스템」가동 실시</p> 
+                                  <p>은퇴금융 브랜드 「IBK평생설계」 선포</p>
+                                </div>
+                        </div>
+
+                        <div class="card" style="height: 25rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">2018</h5>
+                                  <p class="card-text">길거리 점포 2000호점 달성</p>
+                                  <p>중국현지법인 쑤저우 우장지행 개점</p>
+                                  <p>양곤(미얀마)사무소 개소</p>
+                                  <p>03.2013 서민금융포럼 서민금융대상 기업은행 금융위원장상(기관) 수상</p>
+                                </div>
+                        </div>
+
+                </div>
+
+        </div>
+    </div>
+</th:block>
 
 
 </html>
