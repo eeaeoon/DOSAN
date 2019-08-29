@@ -20,16 +20,13 @@
 		from ACCOUNT
 		where ID = #{ACCOUNT_NUM}
 	</select>
-
+<!--
 	<insert id="update" parameterType="Map">
-	    update CIP_ORGANIZATION 
-		set NAME = #{NAME} 			<!-- 명칭 -->
-			, TELEPHONE = #{TELEPHONE} 			<!-- 대표 전화번호 -->
-			, ORDER_NUMBER = #{ORDER_NUMBER} 			<!-- 정렬순서 -->
-			, PARENT_ORGANIZATION_SEQ = null 			<!-- 상위 조직 일련번호 -->
-		where ORGANIZATION_SEQ = #{ORGANIZATION_SEQ}
+	    update ACCOUNT 
+		set VALUE = VALUE - #{VALUE} 			
+			where ACCOUNT_NUM = #{ACCOUNT_NUM}
 	</insert>
-
+-->
 	<insert id="insert" parameterType="Map">
 	    INSERT INTO CIP_ORGANIZATION (
 			ORGANIZATION_SEQ			<!-- 조직 일련번호 -->

@@ -26,42 +26,46 @@
         <form class="card mt-5 p-4" action="/send/insert" method="GET">
             <div class="form-inline mt-3">
                 <div class="custom-control custom-radio mr-3">
-                    <input class="custom-control-input" type="radio" id="customRadio1" name="bank_name" value="국민은행">
+                    <input class="custom-control-input" type="radio" id="customRadio1" name="OTHER_BANK" value="국민은행">
                     <label class="custom-control-label" for="customRadio1">국민은행</label>
                 </div>
                 <div class="custom-control custom-radio mr-3">
-                    <input class="custom-control-input" type="radio" id="customRadio2" name="bank_name" value="신한은행">
+                    <input class="custom-control-input" type="radio" id="customRadio2" name="OTHER_BANK" value="신한은행">
                     <label class="custom-control-label" for="customRadio2">신한은행</label>
                 </div>
                 <div class="custom-control custom-radio mr-3">
-                    <input class="custom-control-input" type="radio" id="customRadio3" name="bank_name" value="농협">
+                    <input class="custom-control-input" type="radio" id="customRadio3" name="OTHER_BANK" value="농협">
                     <label class="custom-control-label" for="customRadio3">농협</label>
                 </div>
             </div>
             <div class="form-inline">
                 <div class="custom-control custom-radio mr-3">
-                    <input class="custom-control-input" type="radio" id="customRadio4" name="bank_name" value="기업은행">
+                    <input class="custom-control-input" type="radio" id="customRadio4" name="OTHER_BANK" value="기업은행">
                     <label class="custom-control-label" for="customRadio4">기업은행</label>
                 </div>
                 <div class="custom-control custom-radio mr-3">
-                    <input class="custom-control-input" type="radio" id="customRadio5" name="bank_name" value="우리은행">
+                    <input class="custom-control-input" type="radio" id="customRadio5" name="OTHER_BANK" value="우리은행">
                     <label class="custom-control-label" for="customRadio5">우리은행</label>
                 </div>
                 <div class="custom-control custom-radio">
-                    <input class="custom-control-input" type="radio" id="customRadio6" name="bank_name" value="카카오뱅크">
+                    <input class="custom-control-input" type="radio" id="customRadio6" name="OTHER_BANK" value="카카오뱅크">
                     <label class="custom-control-label" for="customRadio6">카카오뱅크</label>
                 </div>
             </div>
             <div class="form-group mt-4">
                 <label>송금금액</label>
-                <input class="form-control border-top-0 border-left-0 border-right-0" type="text" id="nt_send"
-                    name="send_value" placeholder="금액을 입력하시오" disabled>
+                <<<<<<< HEAD <input class="form-control border-top-0 border-left-0 border-right-0" type="text"
+                    id="nt_send" name="send_value" placeholder="금액을 입력하시오" disabled>
+                    =======
+                    <input class="form-control border-top-0 border-left-0 border-right-0" type="text" id="nt_send"
+                        name="VALUE" placeholder="금액을 입력하시오" disabled>
+                    >>>>>>> 9cb54a823504b5df6bccda06fadf4606e5d5b475
             </div>
             <br>
             <div class="form-inline">
                 <div class="custom-control custom-radio">
-                    <input class="custom-control-input" type="radio" id="customRadio7" name="bank_name" value="해외송금">
-                    <label class="custom-control-label" for="customRadio7" name="bank_name">해외 송금</label>
+                    <input class="custom-control-input" type="radio" id="customRadio7" value="해외송금">
+                    <label class="custom-control-label" for="customRadio7" name="OTHER_BANK">해외 송금</label>
                 </div>
                 <div class="form-group">
                     <select class="custom-select my-1 ml-3" id="national" disabled>
@@ -73,12 +77,11 @@
                 </div>
             </div>
             <div class="form-inline justify-content-center">
-                <input class="form-control" type="text" name="send_value" id="int_send" placeholder="송금액을 입력하시오."
-                    disabled>
+                <input class="form-control" type="text" name="VALUE" id="int_send" placeholder="송금액을 입력하시오." disabled>
                 <input class="form-control" type="text" name="send_value2" disabled>
             </div>
             <div class="form-group">
-                <input class="form-control" type="text" name="account_num"
+                <input class="form-control" type="text" name="OTHER_NUM"
                     placeholder="송금계좌(&quot;-&quot;를 포함시켜 입력해 주십시오." )>
             </div>
             <button type="submit" class="btn btn-primary"> 송금 진행 </button>

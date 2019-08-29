@@ -42,12 +42,12 @@ public class SendService {
 	}
 
 	public Object saveObject(Map<String, Object> dataMap) {
-		String uniqueSequence = (String) dataMap.get("id");
+		String uniqueSequence = (String) dataMap.get("ACCOUNT_NUM");
 
 		if ("".equals(uniqueSequence)) {
 			uniqueSequence = commonUtil.getUniqueSequence();
 		}
-		dataMap.put("id", uniqueSequence);
+		dataMap.put("ACCOUNT_NUM", uniqueSequence);
 
 		String sqlMapId = "send.insert";
 
