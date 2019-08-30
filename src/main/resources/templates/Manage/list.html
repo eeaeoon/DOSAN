@@ -17,11 +17,8 @@
 </head>
 
 <body>
-    <!-- 상단바 -->
     <th:block th:replace="fragments/commonHead :: commonHeader01"></th:block>
 
-    <!-- 레이아웃 -->
-    <!-- /.row -->
     <div class="container">
         <div xmlns:th="http://www.thymeleaf.org">
             <th:block layout:fragment="listmanage">
@@ -66,14 +63,26 @@
                                                         <td th:text=${resultData.VALUE}>VALUE</td>
                                                         <td th:text=${resultData.BANK_NAME}>BANK_NAME</td>
                                                         <td><a href="./manage/update"
-                                                                th:href=@{/manage/edit(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>edit
+                                                                th:href=@{/manage/update(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>edit
                                                                 </a> </td> <td><a href="./manage/delete"
                                                                     th:href=@{/manage/delete(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>delete
                                                                     </a> </td> </tr> </tbody> </table> <a
-                                                                    class="btn btn-primary btn-sm" href="./input"
-                                                                    th="@{/manage/input}">계좌 추가</a>
+                                                                    class="btn btn-primary btn-sm" href="#"
+                                                                    role="button">계좌 추가</a>
+                                        </p>
+                                        <td><a href="./manage/update"
+                                                th:href=@{/manage/edit(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>edit </a>
+                                                </td> <td><a href="./manage/delete"
+                                                    th:href=@{/manage/delete(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>delete
+                                                    </a> </td> </tr> </tbody> </table> <a class="btn btn-primary btn-sm"
+                                                    href="./input" th="@{/manage/input}">계좌 추가</a>
+                                            </a>
+                                        </td>
+                                        <td><a href="./manage/delete"
+                                                th:href=@{/manage/delete(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>delete
+                                                </a> </td> </tr> </tbody> </table> <a class="btn btn-primary btn-sm"
+                                                href="./input" th="@{/manage/input}">계좌 추가</a>
                                     </div>
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -126,6 +135,10 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <tr th:each="resultData: ${resultMap.resultList}">
+                                                <td th:text=${resultData.PRODUCT}>PRODUCT</td>
+                                                <td th:text=${resultData.NAME}>NAME</td>
+                                                <td th:text=${resultData.DATE}>DATE</td>
                                             <tr th:each="resultData1: ${resultMap1.resultList}">
                                                 <td><input type="checkbox" id="selecctall1" /></td>
                                                 <td th:text=${resultData1.PRODUCT}>PRODUCT</td>
@@ -135,25 +148,17 @@
                                         </tbody>
 
                                     </table>
-                                </p>
-                                <a class="btn btn-primary btn-sm" href="../join" role="button">가입하기</a>
+                                    <a class="btn btn-primary btn-sm" href="../join" role="button">가입하기</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
             </th:block>
         </div>
     </div>
 
-    <!-- /.row -->
-
-
-
-    <!-- 푸터 -->
     <th:block th:replace="fragments/commonFooter :: commonFooter01"></th:block>
-
 </body>
 
 </html>
