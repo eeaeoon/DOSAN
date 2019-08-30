@@ -51,7 +51,7 @@
                                                 id="dataTables-example">
                                                 <thead>
                                                     <tr>
-                                                        <th><input type="checkbox" id="selecctall" /></th>
+                                                        <th><input type="checkbox" id="selectall" /></th>
                                                         <th>계좌번호</th>
                                                         <th>이름</th>
                                                         <th>잔액</th>
@@ -67,11 +67,14 @@
                                                         <td th:text=${resultData.BANK_NAME}>BANK_NAME</td>
                                                         <td><a href="./manage/update"
                                                                 th:href=@{/manage/edit(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>edit
-                                                                </a> </td> <td><a href="./manage/delete"
-                                                                    th:href=@{/manage/delete(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>delete
-                                                                    </a> </td> </tr> </tbody> </table> <a
-                                                                    class="btn btn-primary btn-sm" href="#"
-                                                                    role="button">계좌 추가</a>
+                                                                </a> 
+                                                        </td> 
+                                                        <td><a href="./manage/delete" th:href=@{/manage/delete(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>delete</a> 
+                                                        </td> 
+                                                    </tr> 
+                                                </tbody> 
+                                            </table> 
+                                            <a class="btn btn-primary btn-sm" href="./input" th="@{/manage/input}">계좌 추가</a>
                                     </div>
                                     </p>
                                 </div>

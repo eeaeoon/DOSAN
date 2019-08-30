@@ -28,7 +28,11 @@ public class ManageController {
 
     @Autowired
     private  LoginController loginController;
-    
+    /*
+    @RequestMapping(value = "manage/input", method = {RequestMethod.GET, RequestMethod.POST})
+    public void viewInput(){
+    }
+*/
     // Receive Parameters from Html Using @RequestParam Map with @PathVariable
     @RequestMapping(value = MAPPING + "{action}", method = { RequestMethod.GET, RequestMethod.POST })
     public ModelAndView actionMethod(@RequestParam Map<String, Object> paramMap, @PathVariable String action,
@@ -39,13 +43,12 @@ public class ManageController {
                 // divided depending on action value
                 if ("edit".equals(action)) {
                     resultMap = service.getObject(paramMap);
-                } else if ("input".equals(action)) {
                 } else if ("update".equals(action)) {
                     resultMap = service.updateObject(paramMap);
                     action = "read";
                 } else if ("insert".equals(action)) {
                     resultMap = service.saveObject(paramMap);
-                    action = "";
+                    action = "read";
                 } else if ("read".equals(action)) {
                     resultMap = service.getObject(paramMap);
                 } else if ("list".equals(action)) {

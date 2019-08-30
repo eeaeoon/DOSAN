@@ -89,9 +89,7 @@ public class ManageBean implements Serializable {
             return false;
         }
         ManageBean manageBean = (ManageBean) o;
-        return Objects.equals(NAME, manageBean.NAME) && Objects.equals(VALUE, manageBean.VALUE)
-                && Objects.equals(ACCOUNT_NUM, manageBean.ACCOUNT_NUM)
-                && Objects.equals(BANK_NAME, manageBean.BANK_NAME);
+        return Objects.equals(NAME, manageBean.NAME) && Objects.equals(VALUE, manageBean.VALUE) && Objects.equals(ACCOUNT_NUM, manageBean.ACCOUNT_NUM) && Objects.equals(BANK_NAME, manageBean.BANK_NAME);
     }
 
     @Override
@@ -101,8 +99,14 @@ public class ManageBean implements Serializable {
 
     @Override
     public String toString() {
-        return "{" + " NAME='" + getNAME() + "'" + ", VALUE='" + getVALUE() + "'" + ", ACCOUNT_NUM='" + getACCOUNT_NUM()
-                + "'" + ", BANK_NAME='" + getBANK_NAME() + "'" + "}";
+        return "{" +
+            " NAME='" + getNAME() + "'" +
+            ", VALUE='" + getVALUE() + "'" +
+            ", ACCOUNT_NUM='" + getACCOUNT_NUM() + "'" +
+            ", BANK_NAME='" + getBANK_NAME() + "'" +
+            "}";
     }
+
+    
 
 }

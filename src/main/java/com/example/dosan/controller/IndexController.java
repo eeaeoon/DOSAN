@@ -22,9 +22,9 @@ public class IndexController {
 	public String actionMethod(@RequestParam Map<String, Object> paramMap, @PathVariable String action,
 			ModelAndView modelandView) {
 		if ("login".equals(action) || "sign".equals(action) || "intro".equals(action)) {
-			return "/" + action;
+			return  action;
 		} else if (LoginController.checker) {
-			return "/" + action;
+			return  action;
 		} else
 			return "/false";
 	}

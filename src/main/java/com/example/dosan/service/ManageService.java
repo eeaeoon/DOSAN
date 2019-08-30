@@ -26,8 +26,6 @@ public class ManageService {
         String sqlMapId = "manage.list";
 
         Object resultObject = new HashMap<>();
-        // ((Map<String, Object>) resultObject).put("resultList", dao.getList(sqlMapId,
-        // dataMap));
         ((Map<String, Object>) resultObject).put("resultList", repository.findAll());
 
         return resultObject;
