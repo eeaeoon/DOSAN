@@ -311,7 +311,7 @@
 <th:block th:fragment="intro">
     <div class="image">
         <ul class="nav navbar-light bg-light justify-content-center">
-            <li class="nav-item"><a class="nav-link text-dark" href="../brand">brand</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="../brand">BRAND</a></li>
             <li class="nav-item"><a class="nav-link text-dark" href="#">공지사항</a></li>
             <li class="nav-item"><a class="nav-link text-dark" href="../map">오시는길</a></li>
             <li class="nav-item"><a class="nav-link text-dark" href="#">제휴문의</a></li>
@@ -320,6 +320,8 @@
 
         <div class="text">
             <p>신뢰받고 앞서가는</p>
+        </div>
+        <div class="text3">
             <p>글로벌 금융그룹</p>
         </div>
         <div class="text1">
@@ -329,7 +331,7 @@
 
     <div class="card">
 
-        <img src="images/card-image.png" alt="" />
+        <img src="images/card-image.png" />
 
         <div class="card-body">
 
@@ -348,6 +350,9 @@
             <p class="card-text">4월 'Fast Company' 세계 50대 혁신기업 선정</p>
 
             <h5 class="card-title">2019</h5>
+            <p class="card-text">7월 차세대 은행 시스템 개발 시작</p>
+            <p class="card-text"></p>
+
 
         </div>
 
@@ -443,6 +448,68 @@
 
 
 <th:block th:fragment="join">
+    <div class="container pt-5 mt-5">
+        <div>
+            <h1 class="pb-5">상품 가입</h1>
+            <div class="card text-center">
+                <div class="card-header">
+                    <ul class="nav nav-pills card-header-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">전체 상품</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">추천 상품</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body mx-auto">
+                    <div class="card-deck">
+                        <div class="card  mb-3" style="max-width: 18rem;">
+                            <div class="card-header card-title h5 text-secondary" style="font-weight: bold">정기 예금</div>
+                            <div class="card-body text-secondary">
+                                <img src="image/save.png" class="card-img-top mx-auto"
+                                    style="width:100px; height: 100px;">
+                                <h5 class="card-title">도산 정기예금</h5>
+                                <p class="card-text" style="font-size: small">도산 뱅크 회원이라면 누구나 금리혜택을 받는 정기예금<br><span
+                                        class="h4" style="font-weight: bold;"><br>최고 연 <br>2.10</span>%
+                                </p>
+                                <button class="btn btn-info btn-block mt-5">가입하기</button>
+                            </div>
+                        </div>
+                        <div class="card mb-3" style="max-width: 18rem;">
+                            <div class="card-header card-title h5 text-secondary" style="font-weight: bold">펀드
+                            </div>
+                            <div class="card-body text-secondary">
+                                <img src="image/save.png" class="card-img-top mx-auto"
+                                    style="width:100px; height: 100px;">
+                                <h5 class="card-title">도산 증권 자투자신탁<br>펀드</h5>
+                                <br>
+                                <p class="card-text" style="font-size: small">예금자 보험호범에 따라 예금보험공사가 보호하지 않으며,
+                                    운용결과에 따라
+                                    손실이 발생할 수 있고 그 손실은 투자자에게
+                                    귀속됩니다.</p>
+                                <button class="btn btn-info btn-block mt-5">가입하기</button>
+                            </div>
+                        </div>
+                        <div class="card  mb-3" style="max-width: 18rem;">
+                            <div class="card-header card-title h5 text-secondary" style="font-weight: bold">적금</div>
+                            <div class="card-body text-secondary">
+                                <img src="image/save.png" class="card-img-top mx-auto"
+                                    style="width:100px; height: 100px;">
+                                <h5 class="card-title">도산희망 적금</h5>
+                                <p class="card-text" style="font-size: small">주택구입, 입원 등의 사유 발생시 특별중도해지 서비스를 제공하고
+                                    만지해지시
+                                    우대금리를 제공하는 적립식 상품</p><span class="h4" style="font-weight: bold;">최고 연
+                                    <br>6.50</span>%
+                                <button class="btn btn-info btn-block mt-5">가입하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </th:block>
 
 <th:block th:fragment="help">
@@ -589,13 +656,13 @@
                 </div>
             </div>
             <div class="form-row mt-3">
-                <input class="form-control col" type="text" name="VALUE" id="int_send" placeholder="송금액을 입력하시오." disabled>
+                <input class="form-control col" type="text" name="VALUE" id="int_send" placeholder="송금액을 입력하시오."
+                    disabled>
                 <input class="form-control col" type="text" name="send_value2" disabled>
             </div>
             <hr class="my-4">
             <div class="form-row">
-                <input class="form-control col" type="text" name="OTHER_NAME"
-                    placeholder="상대방 이름">
+                <input class="form-control col" type="text" name="OTHER_NAME" placeholder="상대방 이름">
                 <input class="form-control col" type="text" name="OTHER_NUM"
                     placeholder="송금계좌(&quot;-&quot;를 포함시켜 입력해 주십시오.)">
             </div>

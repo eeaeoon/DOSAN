@@ -23,7 +23,7 @@ public class IndexController {
 			ModelAndView modelandView) {
 		if ("login".equals(action) || "sign".equals(action) || "intro".equals(action)) {
 			return "/" + action;
-		} else if (loginController.checker) {
+		} else if (LoginController.checker) {
 			return "/" + action;
 		} else
 			return "/false";

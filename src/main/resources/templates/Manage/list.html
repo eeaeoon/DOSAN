@@ -67,9 +67,11 @@
                                                         <td th:text=${resultData.BANK_NAME}>BANK_NAME</td>
                                                         <td><a href="./manage/update"
                                                                 th:href=@{/manage/edit(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>edit
-                                                            </a></td> 
-                                                        <td><a href="./manage/delete" th:href=@{/manage/delete(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>delete
-                                                                    </a> </td> </tr> </tbody> </table> <a class="btn btn-primary btn-sm" href="#" role="button">계좌 추가</a>   
+                                                                </a> </td> <td><a href="./manage/delete"
+                                                                    th:href=@{/manage/delete(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>delete
+                                                                    </a> </td> </tr> </tbody> </table> <a
+                                                                    class="btn btn-primary btn-sm" href="#"
+                                                                    role="button">계좌 추가</a>
                                     </div>
                                     </p>
                                 </div>
@@ -83,18 +85,18 @@
                                 <h1 class="display-5">입출금 목록</h1>
                                 <p>최근 30일간 거래 목록입니다.</p>
                                 <hr class="my-4">
-                                    <table class="table table-striped table-bordered table-hover px-3"
-                                        style="font-size:xx-small; text-align: center">
-                                        <thead>
-                                            <tr>
-                                                <th>계좌번호</th>
-                                                <th>상대방<br>계좌번호</th>
-                                                <th>상대방<br>은행명</th>
-                                                <th>상대방<br> 이름</th>
-                                                <th>금액</th>
-                                                <th>날짜</th>
-                                            </tr>
-                                        </thead>
+                                <table class="table table-striped table-bordered table-hover px-3"
+                                    style="font-size:xx-small; text-align: center">
+                                    <thead>
+                                        <tr>
+                                            <th>계좌번호</th>
+                                            <th>상대방<br>계좌번호</th>
+                                            <th>상대방<br>은행명</th>
+                                            <th>상대방<br> 이름</th>
+                                            <th>금액</th>
+                                            <th>날짜</th>
+                                        </tr>
+                                    </thead>
                                     <tbody>
                                         <tr th:each="sendData: ${sendMap.resultList}">
                                             <td th:text=${sendData.ACCOUNT_NUM}>ACCOUNT_NUM</td>
@@ -106,7 +108,6 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                             </div>
                         </div>
 
