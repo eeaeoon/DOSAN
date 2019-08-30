@@ -59,7 +59,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr th:each="resultData: ${resultMap.resultList}">
+                                                    <tr th:each="resultData: ${resultMap}">q
                                                         <td><input type="checkbox" id="selectall" /></td>
                                                         <td th:text=${resultData.ACCOUNT_NUM}>ACCOUNT_NUM</td>
                                                         <td th:text=${resultData.NAME}>NAME</td>
@@ -71,6 +71,7 @@
                                                         </td> 
                                                         <td><a href="./manage/delete" th:href=@{/manage/delete(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>delete</a> 
                                                         </td> 
+                                                        
                                                     </tr> 
                                                 </tbody> 
                                             </table> 
