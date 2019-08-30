@@ -17,11 +17,8 @@
 </head>
 
 <body>
-    <!-- 상단바 -->
     <th:block th:replace="fragments/commonHead :: commonHeader01"></th:block>
 
-    <!-- 레이아웃 -->
-    <!-- /.row -->
     <div class="container">
         <div xmlns:th="http://www.thymeleaf.org">
             <th:block layout:fragment="listmanage">
@@ -65,16 +62,14 @@
                                                         <td th:text=${resultData.NAME}>NAME</td>
                                                         <td th:text=${resultData.VALUE}>VALUE</td>
                                                         <td th:text=${resultData.BANK_NAME}>BANK_NAME</td>
-                                                        <td><a href="./manage/update"
-                                                                th:href=@{/manage/update(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>edit
-                                                                </a> </td> <td><a href="./manage/delete"
-                                                                    th:href=@{/manage/delete(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>delete
-                                                                    </a> </td> </tr>
+                                                        <td><a href="./manage/update" th:href=@{/manage/update(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>edit</a> </td> 
+                                                        <td><a href="./manage/delete" th:href=@{/manage/delete(ACCOUNT_NUM=${resultData.ACCOUNT_NUM})}>delete</a></td> 
+                                                    </tr>
                                                 </tbody>
                                                 </table>
                                             <a class="btn btn-primary btn-sm" href="#" role="button">계좌 추가</a>
+                                        </p>
                                     </div>
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +102,6 @@
                                     </tr>
                                 </tbody>
                                 </table>
-                                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12">
@@ -126,7 +120,6 @@
                                         </thead>
                                         <tbody>
                                             <tr th:each="resultData: ${resultMap.resultList}">
-                                                <td><input type="checkbox" id="selecctall1" /></td>
                                                 <td th:text=${resultData.PRODUCT}>PRODUCT</td>
                                                 <td th:text=${resultData.NAME}>NAME</td>
                                                 <td th:text=${resultData.DATE}>DATE</td>
@@ -134,28 +127,16 @@
                                         </tbody>
                                     </table>
                                 </p>
-                                <hr class="my-4">
-                                <p>It uses utility classes for typography and spacing to
-                                    space content out within the
-                                    larger container.</p>
-                                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
 
-
             </th:block>
         </div>
     </div>
 
-    <!-- /.row -->
-
-
-
-    <!-- 푸터 -->
     <th:block th:replace="fragments/commonFooter :: commonFooter01"></th:block>
-
 </body>
-
 </html>
