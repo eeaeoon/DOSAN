@@ -26,7 +26,7 @@ public class IndexController {
 			return action;
 		} else if (LoginController.checker) {
 			return action;
-		} else{
+		} else
 			return "/false";
 	}
 }
