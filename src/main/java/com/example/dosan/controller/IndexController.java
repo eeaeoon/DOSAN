@@ -21,7 +21,7 @@ public class IndexController {
 	@RequestMapping(value = "/{action}", method = RequestMethod.GET)
 	public String actionMethod(@RequestParam Map<String, Object> paramMap, @PathVariable String action,
 			ModelAndView modelandView) {
-		if ("login".equals(action) || "sign".equals(action) || "intro".equals(action)) {
+		if ("login".equals(action) || "sign".equals(action) || "intro".equals(action) || "map".equals(action)) || "brand".equals(action) {
 			return  action;
 		} else if (LoginController.checker) {
 			return  action;
