@@ -40,7 +40,6 @@ public class SendController {
 			action = "read";
 		} else if ("insert".equals(action)) {
 			paramMap.put("ACCOUNT_NUM", "1111-1111-1111");
-			paramMap.put("OTHER_NAME", "강두훈");
 			paramMap.put("DATE", today);
 			String VALUE = (String) paramMap.get("VALUE");
 			Map<String, Object> updateMap = new HashMap<String, Object>();
