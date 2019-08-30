@@ -27,24 +27,24 @@ public class ProductController {
     public ModelAndView actionMethod(@RequestParam Map<String, Object> paramMap, @PathVariable String action,
             ModelAndView modelandView) {
 
-        Object resultMap = new HashMap<String, Object>();
+        Object resultMap1 = new HashMap<String, Object>();
 
         // divided depending on action value
         if ("edit".equals(action)) {
-            resultMap = service.getObject(paramMap);
+            resultMap1 = service.getObject(paramMap);
         } else if ("input".equals(action)) {
         } else if ("update".equals(action)) {
-            resultMap = service.updateObject(paramMap);
+            resultMap1 = service.updateObject(paramMap);
             action = "read";
         } else if ("insert".equals(action)) {
-            resultMap = service.saveObject(paramMap);
+            resultMap1 = service.saveObject(paramMap);
             action = "read";
         } else if ("read".equals(action)) {
-            resultMap = service.getObject(paramMap);
+            resultMap1 = service.getObject(paramMap);
         } else if ("list".equals(action)) {
-            resultMap = service.getList(paramMap);
+            resultMap1 = service.getList(paramMap);
         } else if ("delete".equals(action)) {
-            resultMap = service.deleteObject(paramMap);
+            resultMap1 = service.deleteObject(paramMap);
             action = "list";
         }
 
@@ -53,7 +53,7 @@ public class ProductController {
         modelandView.setViewName(viewName);
 
         modelandView.addObject("paramMap", paramMap);
-        modelandView.addObject("resultMap", resultMap);
+        modelandView.addObject("resultMap1", resultMap1);
         return modelandView;
     }
 }

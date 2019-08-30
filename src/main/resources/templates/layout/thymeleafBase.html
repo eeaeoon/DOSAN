@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="./js/Healthier_js.js"></script>
-    
+
     <link rel="stylesheet" href="../../static/css/intro.css" th:href="@{/css/intro.css}">
 </head>
 
@@ -182,7 +182,7 @@
                 <p class="lead">모바일로 더 손쉬운 계좌개설, 간편한 이체 <br>도산뱅크로 시작하세요</p>
             </div>
 
-            <form class="form-group font-weight-bold form-signin" action="/login" method="POST"
+            <form class="form-group font-weight-bold form-signin" action="/login/login" method="GET"
                 onsubmit="javascript:return loginChk(this)">
                 <div class="container d-block text-center w-50 mt-3">
 
@@ -310,6 +310,7 @@
 
 <th:block th:fragment="intro">
     <div class="image">
+<<<<<<< HEAD
         
             <nav class="navbar navbar-light bg-light">
                     <form class="form-inline">
@@ -322,23 +323,33 @@
                     </form>
             </nav>
 
+=======
+        <ul class="nav navbar-light bg-light justify-content-center">
+            <li class="nav-item"><a class="nav-link text-dark" href="../brand">BRAND</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="#">공지사항</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="../map">오시는길</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="#">제휴문의</a></li>
+        </ul>
+>>>>>>> 9d160eafca0b564d646ab4d0868a12e4fa999748
         <img src="#" alt="My Image" th:src="@{/image/introimage.jpg}" width="100%" height="100%">
-   
+
         <div class="text">
-                <p>신뢰받고 앞서가는</p>
-                <p>글로벌 금융그룹</p>
+            <p>신뢰받고 앞서가는</p>
+        </div>
+        <div class="text3">
+            <p>글로벌 금융그룹</p>
         </div>
         <div class="text1">
-                <p>D O S A N</p>
+            <p>D O S A N</p>
         </div>
     </div>
 
     <div class="card">
-        
-        <img src="images/card-image.png" alt="" />
-        
+
+        <img src="images/card-image.png" />
+
         <div class="card-body">
-            
+
             <p>연혁</p>
 
             <h5 class="card-title">2016</h5>
@@ -348,104 +359,331 @@
             <h5 class="card-title">2017</h5>
             <p class="card-text">2월 100만 계좌 돌파</p>
             <p class="card-text">12월 구글플레이 '올해의 앱'선정</p>
-            
+
             <h5 class="card-title">2018</h5>
             <p class="card-text">1월 대출시스템 도입</p>
             <p class="card-text">4월 'Fast Company' 세계 50대 혁신기업 선정</p>
-            
+
             <h5 class="card-title">2019</h5>
-            
+            <p class="card-text">7월 차세대 은행 시스템 개발 시작</p>
+            <p class="card-text"></p>
+
+
         </div>
-    
+
     </div>
 
 </th:block>
 
 <th:block th:fragment="brand">
-        <div class="image">
-        
-            <img src="#" alt="My Image" th:src="@{/image/brandimg.jpg}" width="100%" height="100%">
-       
-            <div class="text">
-                    <p>쉬운은행 나만의 은행</p>
-            </div>
-            <div class="text2">
-                    <p>D O S A N</p>
-            </div>
-        
+    <div class="image">
+
+        <img src="#" alt="My Image" th:src="@{/image/brandimg.jpg}" width="100%" height="100%">
+
+        <div class="text">
+            <p>쉬운은행 나만의 은행</p>
+        </div>
+        <div class="text2">
+            <p>D O S A N</p>
         </div>
 
-        <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light bg-white">
-                        <a class="navbar-brand" href="#">연혁</a>
-                </nav>
-        
-            <div class="row">
-                <div class="col-4">
-                    <img src="#" alt="My Image" th:src="@{/image/woong.png}" width="100%" height="50%">    
-                </div>
-            
-    
-                <div class="col-4">
-                        <div class="card" style="height: 25rem;">
-            
-                                <div class="card-body">
-                                  <h5 class="card-title">2015</h5>
-                                  <p class="card-text">대표 전웅재 강박은행 설립</p>
-                                  <p>Service Identity 선포(SMART Service]</p>
-                                  <p>중국 현지법인 설립</p>
-                                  <p>정부 출자 현금 3,000억원 (납입자본금 3조 2,079억원)</p>
-                                  <p>통합인터넷뱅킹시스템 가동(개인뱅킹)</p>
-                                  <p>베트남 하노이 사무소 개소</p>
-                                </div>
-                        </div>
-                        
-                        <div class="card" style="height: 25rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title">2017</h5>
-                                  <p class="card-text">지역경제 활성화를 위한 KT&G ·IBK기업은행 동반성장 업무협약 체결</p>
-                                  <p>필리핀 마닐라지점 개점</p>
-                                  <p>「청년희망펀드 공익신탁」 판매</p>
-                                  <p>인도 뉴델리지점 개점</p>
-                                  <p>「대·중소기업협력재단 동반성장협력사업 협약식」 개최</p>
-                                  <p>「희망경영 실천, 3정 혁신활동」추진</p>
-                                </div>
-                        </div>
+    </div>
 
-                        <div class="card" style="height: 25rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title">2019</h5>
-                                  <p class="card-text">필리핀(BDO)은행 업무협약체결(MOU)</p>
-                                  <p>「스마트뱅킹 이용고객 100만명」 돌파</p>
-                                  <p>러시아 VEB 은행 포괄적 업무협약체결(MOU)</p>
-                                </div>
-                        </div>
-                </div>
-                <div class="col-4">
-                        <div class="card" style="height: 25rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title">2016</h5>
-                                  <p class="card-text">한국농어촌공사「중소기업 지원을 위한 동반성장협력 협약」체결</p>
-                                  <p>4세대 IT시스템 「POST차세대시스템」가동 실시</p> 
-                                  <p>은퇴금융 브랜드 「IBK평생설계」 선포</p>
-                                </div>
-                        </div>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand" href="#">연혁</a>
+        </nav>
 
-                        <div class="card" style="height: 25rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title">2018</h5>
-                                  <p class="card-text">길거리 점포 2000호점 달성</p>
-                                  <p>중국현지법인 쑤저우 우장지행 개점</p>
-                                  <p>양곤(미얀마)사무소 개소</p>
-                                  <p>03.2013 서민금융포럼 서민금융대상 기업은행 금융위원장상(기관) 수상</p>
-                                </div>
-                        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="#" alt="My Image" th:src="@{/image/woong.png}" width="100%" height="50%">
+            </div>
 
+
+            <div class="col-4">
+                <div class="card" style="height: 25rem;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">2015</h5>
+                        <p class="card-text">대표 전웅재 강박은행 설립</p>
+                        <p>Service Identity 선포(SMART Service]</p>
+                        <p>중국 현지법인 설립</p>
+                        <p>정부 출자 현금 3,000억원 (납입자본금 3조 2,079억원)</p>
+                        <p>통합인터넷뱅킹시스템 가동(개인뱅킹)</p>
+                        <p>베트남 하노이 사무소 개소</p>
+                    </div>
                 </div>
+
+                <div class="card" style="height: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">2017</h5>
+                        <p class="card-text">지역경제 활성화를 위한 KT&G ·IBK기업은행 동반성장 업무협약 체결</p>
+                        <p>필리핀 마닐라지점 개점</p>
+                        <p>「청년희망펀드 공익신탁」 판매</p>
+                        <p>인도 뉴델리지점 개점</p>
+                        <p>「대·중소기업협력재단 동반성장협력사업 협약식」 개최</p>
+                        <p>「희망경영 실천, 3정 혁신활동」추진</p>
+                    </div>
+                </div>
+
+                <div class="card" style="height: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">2019</h5>
+                        <p class="card-text">필리핀(BDO)은행 업무협약체결(MOU)</p>
+                        <p>「스마트뱅킹 이용고객 100만명」 돌파</p>
+                        <p>러시아 VEB 은행 포괄적 업무협약체결(MOU)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="height: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">2016</h5>
+                        <p class="card-text">한국농어촌공사「중소기업 지원을 위한 동반성장협력 협약」체결</p>
+                        <p>4세대 IT시스템 「POST차세대시스템」가동 실시</p>
+                        <p>은퇴금융 브랜드 「IBK평생설계」 선포</p>
+                    </div>
+                </div>
+
+                <div class="card" style="height: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">2018</h5>
+                        <p class="card-text">길거리 점포 2000호점 달성</p>
+                        <p>중국현지법인 쑤저우 우장지행 개점</p>
+                        <p>양곤(미얀마)사무소 개소</p>
+                        <p>03.2013 서민금융포럼 서민금융대상 기업은행 금융위원장상(기관) 수상</p>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
     </div>
 </th:block>
 
+
+<th:block th:fragment="join">
+    <div class="container pt-5 mt-5">
+        <div>
+            <h1 class="pb-5">상품 가입</h1>
+            <div class="card text-center">
+                <div class="card-header">
+                    <ul class="nav nav-pills card-header-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">전체 상품</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">추천 상품</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body mx-auto">
+                    <div class="card-deck">
+                        <div class="card  mb-3" style="max-width: 18rem;">
+                            <div class="card-header card-title h5 text-secondary" style="font-weight: bold">정기 예금</div>
+                            <div class="card-body text-secondary">
+                                <img src="image/save.png" class="card-img-top mx-auto"
+                                    style="width:100px; height: 100px;">
+                                <h5 class="card-title">도산 정기예금</h5>
+                                <p class="card-text" style="font-size: small">도산 뱅크 회원이라면 누구나 금리혜택을 받는 정기예금<br><span
+                                        class="h4" style="font-weight: bold;"><br>최고 연 <br>2.10</span>%
+                                </p>
+                                <button class="btn btn-info btn-block mt-5">가입하기</button>
+                            </div>
+                        </div>
+                        <div class="card mb-3" style="max-width: 18rem;">
+                            <div class="card-header card-title h5 text-secondary" style="font-weight: bold">펀드
+                            </div>
+                            <div class="card-body text-secondary">
+                                <img src="image/save.png" class="card-img-top mx-auto"
+                                    style="width:100px; height: 100px;">
+                                <h5 class="card-title">도산 증권 자투자신탁<br>펀드</h5>
+                                <br>
+                                <p class="card-text" style="font-size: small">예금자 보험호범에 따라 예금보험공사가 보호하지 않으며,
+                                    운용결과에 따라
+                                    손실이 발생할 수 있고 그 손실은 투자자에게
+                                    귀속됩니다.</p>
+                                <button class="btn btn-info btn-block mt-5">가입하기</button>
+                            </div>
+                        </div>
+                        <div class="card  mb-3" style="max-width: 18rem;">
+                            <div class="card-header card-title h5 text-secondary" style="font-weight: bold">적금</div>
+                            <div class="card-body text-secondary">
+                                <img src="image/save.png" class="card-img-top mx-auto"
+                                    style="width:100px; height: 100px;">
+                                <h5 class="card-title">도산희망 적금</h5>
+                                <p class="card-text" style="font-size: small">주택구입, 입원 등의 사유 발생시 특별중도해지 서비스를 제공하고
+                                    만지해지시
+                                    우대금리를 제공하는 적립식 상품</p><span class="h4" style="font-weight: bold;">최고 연
+                                    <br>6.50</span>%
+                                <button class="btn btn-info btn-block mt-5">가입하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</th:block>
+
+<th:block th:fragment="help">
+    <div class="container pt-5 mt-5">
+        <div class="py-4">
+            <h2>자주하는 질문</h2>
+        </div>
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            1. 계좌 등록은 어떻게하나요?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
+                    <div class="card-body">
+                        회원 가입 하실 때 함께 등록하세요.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            2. 수수료는 없나요?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        네. 없습니다.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            3. 왜 일본 엔화는 취급하지 않나요?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        시국이 시국인만큼 일본 엔화는 취급하지 않습니다.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingfour">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                            4. 채용 관련 정보를 알려주실 수 있나요?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+                    <div class="card-body">
+                        사람인 혹은 잡코리아에 분기마다 채용공고를 올리고 있습니다.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingfive">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                            5. 더 이상 질문 안받겠습니다.
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+                    <div class="card-body">
+                        ...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
+
+<th:block th:fragment="send">
+    <div class="container">
+        <h1>송금</h1>
+        <form class="card mt-5 p-4" action="/send/insert" method="POST">
+            <h1>송금</h1>
+            <hr class="my-4">
+            <h4>국내송금</h4>
+            <div class="form-inline mt-3">
+                <div class="custom-control custom-radio mr-3">
+                    <input class="custom-control-input" type="radio" id="customRadio1" name="OTHER_BANK" value="국민은행">
+                    <label class="custom-control-label" for="customRadio1">국민은행</label>
+                </div>
+                <div class="custom-control custom-radio mr-3">
+                    <input class="custom-control-input" type="radio" id="customRadio2" name="OTHER_BANK" value="신한은행">
+                    <label class="custom-control-label" for="customRadio2">신한은행</label>
+                </div>
+                <div class="custom-control custom-radio mr-3">
+                    <input class="custom-control-input" type="radio" id="customRadio3" name="OTHER_BANK" value="농협">
+                    <label class="custom-control-label" for="customRadio3">농협</label>
+                </div>
+            </div>
+            <div class="form-inline">
+                <div class="custom-control custom-radio mr-3">
+                    <input class="custom-control-input" type="radio" id="customRadio4" name="OTHER_BANK" value="기업은행">
+                    <label class="custom-control-label" for="customRadio4">기업은행</label>
+                </div>
+                <div class="custom-control custom-radio mr-3">
+                    <input class="custom-control-input" type="radio" id="customRadio5" name="OTHER_BANK" value="우리은행">
+                    <label class="custom-control-label" for="customRadio5">우리은행</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" id="customRadio6" name="OTHER_BANK" value="카카오뱅크">
+                    <label class="custom-control-label" for="customRadio6">카카오뱅크</label>
+                </div>
+            </div>
+            <div class="form-group mt-4">
+                <label>송금금액</label>
+                <input class="form-control border-top-0 border-left-0 border-right-0" type="text" id="nt_send"
+                    name="VALUE" placeholder="금액을 입력하시오" disabled>
+            </div>
+            <hr class="my-4">
+            <h4>해외송금</h4>
+            <div class="form-inline">
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" id="customRadio7" name="OTHER_BANK" value="해외송금">
+                    <label class="custom-control-label" for="customRadio7" name="OTHER_BANK">해외 송금</label>
+                </div>
+                <div class="form-group">
+                    <select class="custom-select my-1 ml-3" id="national" disabled>
+                        <option selected>국가</option>
+                        <option value="미국">미국</option>
+                        <option value="중국">중국</option>
+                        <option value="베트남">베트남</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row mt-3">
+                <input class="form-control col" type="text" name="VALUE" id="int_send" placeholder="송금액을 입력하시오."
+                    disabled>
+                <input class="form-control col" type="text" name="send_value2" disabled>
+            </div>
+            <hr class="my-4">
+            <div class="form-row">
+                <input class="form-control col" type="text" name="OTHER_NAME" placeholder="상대방 이름">
+                <input class="form-control col" type="text" name="OTHER_NUM"
+                    placeholder="송금계좌(&quot;-&quot;를 포함시켜 입력해 주십시오.)">
+            </div>
+            <button type=" submit" class="btn btn-primary mt-4"> 송금 진행 </button>
+        </form>
+    </div>
+</th:block>
 
 </html>

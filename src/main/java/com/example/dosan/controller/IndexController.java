@@ -3,6 +3,7 @@ package com.example.dosan.controller;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,14 +18,15 @@ public class IndexController {
 	// @RequestMapping(value = { "/index", "/layout/defaultLayout" }, method =
 	// RequestMethod.GET)
 
-	@RequestMapping(value = { "/index", "/intro", "/manage", "/send", "/help", "/join", "/login", "/sign",
-			"/admin","/brand", "/map" }, method = RequestMethod.GET)
-
-	public void actionMethod(@RequestParam Map<String, Object> paramMap, ModelAndView modelandView) {
-		String viewName = "/index";
-
-		// modelandView.setViewName(viewName);
-
-		// return modelandView;
+	@RequestMapping(value = "/{action}", method = RequestMethod.GET)
+	public String actionMethod(@RequestParam Map<String, Object> paramMap, @PathVariable String action,
+			ModelAndView modelandView) {
+		if ("login".equals(action) || "sign".equals(action) || "intro".equals(action) || "map".equals(action)
+				|| "brand".equals(action)) {
+			return action;
+		} else if (LoginController.checker) {
+			return action;
+		} else{
+			return "/false";
 	}
 }

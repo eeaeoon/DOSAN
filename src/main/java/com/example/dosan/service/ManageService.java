@@ -25,10 +25,7 @@ public class ManageService {
     public Object getList(Object dataMap) {
         String sqlMapId = "manage.list";
 
-        Object resultObject = new HashMap<>();
-        // ((Map<String, Object>) resultObject).put("resultList", dao.getList(sqlMapId,
-        // dataMap));
-        ((Map<String, Object>) resultObject).put("resultList", repository.findAll());
+        Object resultObject = dao.getList(sqlMapId, dataMap);
 
         return resultObject;
     }
@@ -59,7 +56,7 @@ public class ManageService {
     }
 
     public Object updateObject(Map<String, Object> dataMap) {
-        String sqlMapId = "manage.update";
+        String sqlMapId = "manage.edit";
 
         Integer resultKey = (Integer) dao.saveObject(sqlMapId, dataMap);
 
